@@ -1,7 +1,7 @@
 # Sunyoung Seo — Portfolio
 
 Static one-page portfolio built from `sunyoung_portfolio.pdf`. No build step — a single
-self-contained `index.html` with inline CSS, styled to match <https://onghwan.github.io/>.
+self-contained `index.html` with inline CSS.
 
 ```
 index.html          ← all markup and CSS
