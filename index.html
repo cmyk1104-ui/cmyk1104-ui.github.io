@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunyoung Seo — Product Designer</title>
+<meta name="description" content="Portfolio of Sunyoung Seo, product designer. Nearly a decade of UX design at Samsung Electronics across mobile, smart home appliances (IoT), and applications.">
+<meta property="og:title" content="Sunyoung Seo — Product Designer">
+<meta property="og:description" content="Featured projects: Family Hub, Cornerstone, Smart Home lighting, and Smart Q.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --muted: #6b6b6b;
+    --faint: #8e8e8e;
+    --rule: #e4e4e4;
+    --card: #f6f6f6;
+    --link: #111111;
+    --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e0f;
+      --fg: #ededed;
+      --muted: #9b9b9b;
+      --faint: #7d7d7d;
+      --rule: #262628;
+      --card: #17171a;
+      --link: #ededed;
+      --shadow: 0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.45);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .prose { max-width: 720px; }
+
+  /* ---------- header ---------- */
+  header { padding: 72px 0 40px; }
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .role {
+    margin: 14px 0 2px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .place { margin: 0; color: var(--muted); font-size: .95rem; }
+  .contact {
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    font-size: .92rem;
+  }
+  .contact a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+  .contact a:hover { border-bottom-color: currentColor; }
+  .summary { margin: 34px 0 0; color: var(--muted); font-size: 1.02rem; }
+  .summary + .summary { margin-top: 1.05em; }
+
+  /* ---------- section label ---------- */
+  .label {
+    margin: 64px 0 0;
+    padding-top: 14px;
+    border-top: 2px solid var(--fg);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- project ---------- */
+  .project { padding: 46px 0 8px; border-bottom: 1px solid var(--rule); }
+  .project:last-of-type { border-bottom: 0; }
+  .project h2 {
+    margin: 0;
+    font-size: 1.65rem;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+  .meta { margin: 6px 0 0; color: var(--muted); font-size: .92rem; }
+
+  /* ---------- screenshot strip ---------- */
+  .shots {
+    display: flex;
+    gap: 16px;
+    margin: 26px 0 32px;
+    padding: 4px 28px 18px;
+    margin-left: -28px;
+    margin-right: -28px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .shots img {
+    height: clamp(300px, 42vw, 430px);
+    width: auto;
+    flex: 0 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--rule);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    scroll-snap-align: start;
+  }
+  .shots img.wide { border-radius: 10px; }
+
+  /* ---------- body copy ---------- */
+  .project p { margin: 0 0 1.05em; }
+  .project p strong { font-weight: 650; }
+
+  .links, .facts { margin: 26px 0 34px; }
+  .links h3, .facts h3 {
+    margin: 0 0 8px;
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .links ul, .facts ul { margin: 0; padding: 0; list-style: none; }
+  .links li, .facts li { margin: 0 0 5px; }
+  .facts li { font-size: .9rem; color: var(--muted); }
+  .links a {
+    color: var(--link);
+    font-size: .9rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    word-break: break-word;
+  }
+  .links a:hover { border-bottom-color: currentColor; }
+
+  /* ---------- footer ---------- */
+  footer {
+    margin: 30px 0 0;
+    padding: 30px 0 70px;
+    border-top: 2px solid var(--fg);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  footer a:hover { border-bottom-color: currentColor; }
+  footer .f-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 14px; padding: 0; list-style: none; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    header { padding: 52px 0 30px; }
+    .wrap { padding: 0 20px; }
+    .shots { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>Sunyoung Seo</h1>
+    <p class="role">Product Designer</p>
+    <p class="place">UI · Service Design · User Research · Prototyping</p>
+    <ul class="contact">
+      <li><a href="https://www.linkedin.com/in/bonbon0814">linkedin.com/in/bonbon0814</a></li>
+      <li><a href="assets/sunyoung_portfolio.pdf">Portfolio (PDF)</a></li>
+    </ul>
+    <p class="summary prose">
+      With nearly a decade of UX design experience at Samsung Electronics, I specialize in creating accessible,
+      user-centered digital experiences across mobile platforms, smart home appliances (IoT), and applications.
+      Having evolved from a GUI designer into an end-to-end product and service designer, my expertise spans UI
+      design, service design, user research, and prototyping.
+    </p>
+    <p class="summary prose">
+      By leveraging human-centered frameworks — such as customer journey mapping, service blueprints, and pain
+      point identification — I bridge design thinking with business objectives to transform deep user insights
+      into successful, market-ready products.
+    </p>
+  </header>
+
+  <p class="label">Featured Projects</p>
+
+  <!-- ============ Family Hub ============ -->
+  <section class="project">
+    <h2>Family Hub</h2>
+    <p class="meta">Samsung Electronics · CES 2018 Innovation Award winner</p>
+
+    <div class="shots">
+      <img class="wide" src="assets/img/hero-2.jpg" alt="Samsung Family Hub refrigerator with the touchscreen panel on the door" loading="lazy">
+      <img class="wide" src="assets/img/familyhub-hero.jpg" alt="Family Hub panel and companion phone app both showing View Inside" loading="lazy">
+      <img src="assets/img/fh-1.jpg" alt="Family Hub memo and photo screen with a handwritten birthday note" loading="lazy">
+      <img src="assets/img/fh-2.jpg" alt="Cool Select Zone beer chiller timer screen" loading="lazy">
+      <img src="assets/img/fh-3.jpg" alt="Fridge Manager screen showing the three cooling zones and their temperatures" loading="lazy">
+      <img src="assets/img/fh-4.jpg" alt="Water dispenser screen counting out a 200 ml measure" loading="lazy">
+      <img src="assets/img/fh-5.jpg" alt="Fridge settings list with door alarm, ice maker, and energy saver" loading="lazy">
+      <img src="assets/img/fh-6.jpg" alt="TuneIn radio player running on the Family Hub panel" loading="lazy">
+    </div>
+
+    <div class="prose">
+      <p><strong>Family Hub</strong> is a high-definition touchscreen mounted on a refrigerator door, providing useful
+      and engaging information for the whole family. It is a screen nobody chooses to open — it is simply there, in the
+      kitchen, glanced at by everyone in the household throughout the day.</p>
+
+      <p>The panel's <strong>View Inside</strong> feature lets users check the contents of their fridge on the way home
+      to see what they need for dinner — like checking whether they are low on milk. It also tracks expiration dates for
+      food items and leverages <strong>Bixby</strong> to simplify food management, helping users plan meals like a pro.
+      Around that core sit the everyday screens: shared memos and photos, a Cool Select Zone timer, the Fridge Manager
+      view of all three cooling zones, a measured water dispenser, settings, and media.</p>
+
+      <p>My contribution began with <strong>GUI trend research</strong> and ran through the foundations the rest of the
+      panel is built on — <strong>basic rules, winset, and Settings UX design</strong> — as well as
+      <strong>key screen design</strong>. Because this display is fixed to a refrigerator door rather than held in the
+      hand, I also worked on <strong>GUI accessibility and reachability</strong>, optimizing the interface for the full
+      range of user heights and viewing angles rather than for a single ideal posture.</p>
+
+      <div class="facts">
+        <h3>Role &amp; Contribution</h3>
+        <ul>
+          <li>GUI trend research</li>
+          <li>Basic rule, winset, and Settings UX design</li>
+          <li>Key screen design</li>
+          <li>GUI accessibility &amp; reachability optimization for all user heights and angles</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Cornerstone ============ -->
+  <section class="project">
+    <h2>Cornerstone</h2>
+    <p class="meta">Samsung Electronics · Integrated smart home control app</p>
+
+    <div class="shots">
+      <img src="assets/img/cs-1.jpg" alt="Device list showing a completed washer cycle, mode presets, and a Home View of the kitchen" loading="lazy">
+      <img src="assets/img/cs-2.jpg" alt="Air conditioner control screen in Cool mode, set to 23 degrees" loading="lazy">
+      <img src="assets/img/cs-3.jpg" alt="Robot vacuum screen showing the live camera view and returning for charging" loading="lazy">
+      <img class="wide" src="assets/img/hero-4.jpg" alt="The smart home app running on a phone in a kitchen" loading="lazy">
+    </div>
+
+    <div class="prose">
+      <p><strong>Cornerstone</strong> is an integrated mobile application for monitoring and controlling a whole house of
+      appliances — washers, refrigerators, air conditioners, and robot vacuums — from a single interface, instead of one
+      app per device.</p>
+
+      <p>The app is organized around intuitive <strong>mode presets</strong> — Going Out, Coming Home, Good Night, Good
+      Morning — so that the intentions people actually have take one tap, rather than a walk through every device in the
+      house. <strong>Real-time device status</strong> sits on the same screen, alongside a Home View that places those
+      devices in the rooms they belong to.</p>
+
+      <p>Each device then gets a control screen shaped around its own primary action: a dial for temperature on the air
+      conditioner, a live camera view and directional controls for the robot vacuum, cycle status for the washer. The
+      shared layer is the shell and the status model; the differences are where each appliance genuinely differs.</p>
+    </div>
+  </section>
+
+  <!-- ============ Smart Home lighting ============ -->
+  <section class="project">
+    <h2>Smart Home Lighting</h2>
+    <p class="meta">Samsung Electronics · Connected lamp control app</p>
+
+    <div class="shots">
+      <img src="assets/img/sh-1.jpg" alt="Kitchen lamp group screen listing pendant, floor stand, and bracket lights" loading="lazy">
+      <img src="assets/img/sh-2.jpg" alt="Pendant lamp at 100 percent brightness, the background warm and bright" loading="lazy">
+      <img src="assets/img/sh-3.jpg" alt="The same pendant lamp dimmed to 20 percent, the background dark and cool" loading="lazy">
+      <img class="wide" src="assets/img/hero-1.jpg" alt="Pendant lamp product photograph" loading="lazy">
+    </div>
+
+    <div class="prose">
+      <p>An <strong>intuitive lighting control app</strong> for connected lamps, covering everything from basic power
+      functions to precise brightness levels from the palm of the hand.</p>
+
+      <p><strong>Intuitive visual representation.</strong> Each lamp type — pendant, floor stand, wall bracket — has its
+      own clear, simplified icon. The background is dynamic and colored: warm and bright at full power, transitioning to
+      darker, less warm tones at lower brightness levels. The screen behaves like the light it controls, so the current
+      state is readable before any number is.</p>
+
+      <p><strong>Contextual overview.</strong> Lamps are grouped by room — 'Kitchen', for example — making devices easy
+      to find and control by location, and a central control screen shows multiple lamps and their individual power
+      status at a glance.</p>
+
+      <p><strong>Streamlined control.</strong> The design focuses on the most common actions, power and brightness, with
+      simple tap and slider interactions, and avoids deep menus so that the most critical controls stay within immediate
+      reach.</p>
+    </div>
+  </section>
+
+  <!-- ============ Smart Q ============ -->
+  <section class="project">
+    <h2>Smart Q</h2>
+    <p class="meta">Samsung Electronics · IDEA 2012 Finalist, Digital Design</p>
+
+    <div class="shots">
+      <img src="assets/img/sq-ac-1.jpg" alt="Air conditioner app in Auto mode, humidity reading Good at 42 percent" loading="lazy">
+      <img src="assets/img/sq-ac-2.jpg" alt="Air conditioner app in Cool mode, set to 23 degrees against a home reading of 26" loading="lazy">
+      <img class="wide" src="assets/img/sq-product.jpg" alt="The Samsung air conditioner hardware: floor standing and wall mounted units" loading="lazy">
+      <img class="wide" src="assets/img/sq-award.jpg" alt="International Design Excellence Awards 2012 Finalist certificate" loading="lazy">
+    </div>
+
+    <div class="prose">
+      <p><strong>Smart Q</strong> is an air conditioner control application installed on a smartphone and used both
+      indoors and outdoors, supporting <strong>voice control</strong> and <strong>touch control</strong>. I worked on it
+      <strong>end to end</strong>.</p>
+
+      <p>The product centers on smart cooling and humidity control. An <strong>intelligent cooling system</strong>
+      maintains ideal indoor temperatures through automated climate tracking; <strong>automated humidity
+      regulation</strong> keeps indoor humidity at optimal levels of 40–60% for continuous comfort; and the two are held
+      in <strong>balance</strong> against each other, improving comfort while preventing excessive energy use.</p>
+
+      <p>That balance is what the interface had to make legible. A single dial carries the current room temperature, the
+      target setting, and the humidity reading together, so the state of the room and the state of the machine can be
+      read in one glance — and the humidity band is labelled in plain language, 'Good', rather than left as a number to
+      interpret.</p>
+
+      <div class="facts">
+        <h3>Recognition</h3>
+        <ul>
+          <li>International Design Excellence Awards (IDEA) 2012 Finalist — Digital Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul class="f-links">
+      <li><a href="https://www.linkedin.com/in/bonbon0814">LinkedIn</a></li>
+      <li><a href="assets/sunyoung_portfolio.pdf">Portfolio (PDF)</a></li>
+    </ul>
+    <p>Sunyoung Seo — Product Designer</p>
+  </footer>
+
+</div>
+</body>
+</html>
